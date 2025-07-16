@@ -115,7 +115,7 @@ export function Header() {
             >
               <LuCircleUser />
               <span className="hidden sm:inline truncate max-w-[120px]">
-                {user.name?.charAt(0).toUpperCase() + user.name?.slice(1)}
+                {user.name ? user.name.charAt(0).toUpperCase() + user.name.slice(1) : ''}
               </span>
             </div>
 

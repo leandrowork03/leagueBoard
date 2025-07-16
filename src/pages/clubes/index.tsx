@@ -1,6 +1,6 @@
 //src/pages/clubes/index.tsx
 import { useEffect, useState } from 'react';
-import type React from 'react';
+
 import { Container } from '../../components/container';
 
 export interface Club {
@@ -8,7 +8,7 @@ export interface Club {
   name: string;
   logo: string;
   titulos: string;
-  histortia: string;
+  historia: string;
   torcedores: string;
 }
 

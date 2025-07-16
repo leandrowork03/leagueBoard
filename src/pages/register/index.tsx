@@ -69,7 +69,6 @@ export function Register() {
             <Input
               type="text"
               placeholder="Digite seu nome"
-              autocomplete="off"
               name="name"
               error={errors.name?.message || ""}
               register={register}
@@ -79,7 +78,6 @@ export function Register() {
             <Input
               type="email"
               placeholder="Digite seu e-mail"
-              autocomplete="off"
               name="email"
               error={errors.email?.message || ""}
               register={register}
@@ -88,7 +86,6 @@ export function Register() {
             <Input
               type="password"
               placeholder="Digite sua senha"
-              autocomplete="off"
               name="password"
               error={errors.password?.message || ""}
               register={register}
