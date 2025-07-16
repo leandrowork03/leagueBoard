@@ -1,69 +1,49 @@
-# React + TypeScript + Vite
+# LeagueBoard - Parte do Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Front-end React para o LeagueBoard, sistema para busca e visualização de clubes de futebol.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Sobre
 
-## Expanding the ESLint configuration
+Este projeto é o front-end desenvolvido em React e TypeScript que consome uma API backend em Node.js para fornecer dados dos clubes, autenticação e funcionalidades do sistema.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Inclui:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Sistema de autenticação com cadastro e login
+- Busca de clubes com sugestões automáticas (autocomplete)
+- Visualização de detalhes dos clubes
+- Menu dinâmico para usuários logados (dashboard, home e logout)
+- Feedbacks visuais com notificações toast
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tecnologias e bibliotecas principais
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React com hooks e React Router para navegação
+- TypeScript para tipagem estática
+- React Hook Form para gerenciamento e validação de formulários
+- Zod para validação e esquema dos dados dos formulários
+- React Hot Toast para notificações visuais
+- Firebase Authentication para autenticação de usuários
+- CSS com Tailwind (ou seu sistema de estilos)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Funcionalidades principais
+
+- Cadastro e login com validação avançada (via react-hook-form + zod)
+- Busca de clubes com filtro em tempo real e autocomplete
+- Visualização dos detalhes de cada clube
+- Menu usuário com opções dashboard, home e logout, exibido apenas para usuários logados
+- Feedbacks rápidos para ações como login, cadastro, erros, etc.
+
+---
+
+## Como rodar localmente
+
+1. Clone este repositório.
+
+```bash
+git clone <URL_DO_REPOSITÓRIO>
+cd leagueboard-front
