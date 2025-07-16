@@ -16,7 +16,7 @@ export function Details() {
       return;
     }
 
-    fetch(`https://api-futebol-sqjf.onrender.com/clubs${id}`)
+    fetch(`https://api-futebol-sqjf.onrender.com/clubs/${id}`)
       .then((response) => {
         console.log("Status da resposta:", response.status);
         return response.json();
