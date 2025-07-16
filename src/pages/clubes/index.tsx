@@ -16,7 +16,7 @@ export function Clubes() {
   const [clubs, setClubs] = useState<Club[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/clubs')
+    fetch('https://api-futebol-sqjf.onrender.com/clubs')
       .then((response) => response.json())
       .then((data) => setClubs(data))
       .catch((error) => console.error('Erro ao buscar clubes:', error));

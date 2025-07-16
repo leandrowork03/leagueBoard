@@ -37,7 +37,7 @@ export function Home() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:3001/clubs')
+    fetch('https://api-futebol-sqjf.onrender.com/clubs')
       .then(res => res.json())
       .then(setClubs)
       .catch(console.error);
